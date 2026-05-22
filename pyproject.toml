@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "esales"
+version = "0.1.0"
+description = "E-commerce Sales Intelligence CLI"
+requires-python = ">=3.9"
+dependencies = [
+    "typer>=0.12",
+    "rich>=13",
+    "plotext>=5.2",
+    "pandas>=2.0",
+    "numpy>=1.26",
+]
+
+[project.scripts]
+esales = "esales.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["esales*"]
